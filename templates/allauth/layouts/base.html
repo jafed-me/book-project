@@ -1,0 +1,36 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% include "base/css_link.html" %}
+        <title>
+            {% block head_title %}
+            {% endblock head_title %}
+        </title>
+        {% block extra_head %}
+        {% endblock extra_head %}
+    </head>
+    <body>
+        {% include "base/navbar.html" %}
+        {% block body %}
+            {% if messages %}
+                <div>
+                    <strong>{% trans "Messages:" %}</strong>
+                    <ul>
+                        {% for message in messages %}<li>{{ message }}</li>{% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="container w-50 style="min-width: 300px; max-width: 500px;">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        {% endblock body %}
+
+        {% include "base/footer.html" %}
+        {% block extra_body %}
+        {% endblock extra_body %}
+    </body>
+</html>
