@@ -24,19 +24,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nquxy%lv!!gty6oos81fk1eply+rjzdjo2uxr3e!_tnip4)_fl'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '192.168.68.54',
-    '0.0.0.0'
-]
-
 
 # Application definition
 
@@ -96,17 +83,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
